@@ -1,7 +1,16 @@
 #ifndef _DSA_LINKED_LIST_H_
 #define _DSA_LINKED_LIST_H_
 
+typedef struct ListNode {
+    struct ListNode *prev;
+    struct ListNode *next;
+    void *value;
+} ListNode;
+
 typedef struct List {
+    int count;
+    ListNode *first;
+    ListNode *last;
 } List;
 
 List *List_create();
