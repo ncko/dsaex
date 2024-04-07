@@ -36,7 +36,7 @@ mvbin:
 
 .PHONY: clean
 clean:
-	@rm -fr ./bin *.o *.a $(TESTS)
+	@rm -fr ./bin *.o *.a $(TESTS) tests/tests.log
 
 .PHONY: tests
 run_tests: LDLIBS += libdsa.a
