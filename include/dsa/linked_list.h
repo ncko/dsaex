@@ -1,7 +1,16 @@
 #ifndef _DSA_LINKED_LIST_H_
 #define _DSA_LINKED_LIST_H_
 
+typedef struct ListNode {
+    void *value;
+    struct ListNode *prev;
+    struct ListNode *next;
+} ListNode;
+
 typedef struct List {
+    ListNode *first;
+    ListNode *last;
+    int count;
 } List;
 
 List *List_create();
@@ -19,5 +28,6 @@ void List_reverse(List *list);
 void List_insert_sorted(List *list, void *value);
 
 void List_free(List *list);
+void List_clear(List *list);
 
 #endif

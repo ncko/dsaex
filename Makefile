@@ -15,6 +15,7 @@ dev: CPPFLAGS += -DDEBUG
 dev: CFLAGS += -g
 dev: all
 
+tests: CFLAGS += -g
 tests: clean libdsa.a run_tests
 
 main: main.o linked_list.o
